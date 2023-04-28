@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:play": "pnpm -r --filter play run dev",
-    "build:liuchengjin": "gulp -f packages/components/script/build/index.ts"
+    "build:liuchengjin": "gulp -f packages/components/script/build/index.ts",
+    "publish:liuchengjin": "gulp -f packages/components/script/publish/index.ts"
   },
   "keywords": [],
   "author": "liuchengjin",
