@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "strict": true,
+    "target": "ES2015",
+    "suppressImplicitAnyIndexErrors": true,// 有时候会报错，但是不影响使用，可以忽略
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "lib": ["esnext", "dom"],
+    "resolveJsonModule": true,
+    "types": ["unplugin-vue-define-options/macros-global"]
+  }
+}
