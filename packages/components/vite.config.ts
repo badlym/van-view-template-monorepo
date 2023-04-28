@@ -1,14 +1,39 @@
-/// <reference types="vitest" />
+// / <reference types="vitest" />
+import {resolve} from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 // @ts-ignore
 import DefineOptions from 'unplugin-vue-define-options/vite';
 // @ts-ignore
+
+export function pathResolve(dir: string) {
+  return resolve(process.cwd(), '.', dir);
+}
+
 export default defineConfig({
-  test: {
-    environment: 'happy-dom'
+
+  resolve: {
+    alias: [
+      {
+        find: 'vue', // 解决动态模板发布后不显示问题
+        replacement: 'vue/dist/vue.esm-bundler.js',
+      },
+
+      {
+        find: /@\//,
+        replacement: pathResolve('src') + '/',
+      },
+      {
+        find: /#\//,
+        replacement: pathResolve('packages') + '/',
+      },
+    ],
   },
+
+  // test: {
+  //   environment: 'happy-dom'
+  // },
   build: {
     //压缩
     //minify: false,
