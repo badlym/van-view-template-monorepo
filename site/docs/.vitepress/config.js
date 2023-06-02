@@ -1,6 +1,6 @@
 export default {
   title: 'Easyest',
-  base: process.env.NODE_ENV === 'production' ? '/easyest/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/doc/' : '/',
   themeConfig: {
     nav: [{ text: '文档', link: '/guild/introduce' }],
     sidebar: {
