@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@liuchengjin/components": "workspace:^",
-    "@liuchengjin/monorepo": "workspace:^"
+    "@van-view-template/components": "workspace:^",
+    "@van-view-template/monorepo": "workspace:^"
   }
 }

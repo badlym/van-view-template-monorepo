@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./app.vue";
-  import LiuchengjinComponent from '@liuchengjin/components'
+  import van-view-templateComponent from '@van-view-template/components'
 const app = createApp(App);
-  app.use(LiuchengjinComponent)
+  app.use(van-view-templateComponent)
 app.mount("#app");

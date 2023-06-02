@@ -39,7 +39,7 @@ export default defineConfig({
     //minify: false,
     rollupOptions: {
       //忽略打包vue文件
-      external: ['vue', /\.less/, '@liuchengjin/utils'],
+      external: ['vue', /\.less/, '@van-view-template/utils'],
       input: ['index.ts'],
       output: [
         {
@@ -51,7 +51,7 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
           //配置打包根目录
-          dir: '../liuchengjin/es'
+          dir: '../van-view-template/es'
         },
         {
           //打包格式
@@ -62,20 +62,20 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
           //配置打包根目录
-          dir: '../liuchengjin/lib'
+          dir: '../van-view-template/lib'
         }
       ]
     },
     lib: {
       entry: './index.ts',
-      name: 'liuchengjin'
+      name: 'van-view-template'
     }
   },
   plugins: [
     vue(),
     dts({
       entryRoot: 'src',
-      outputDir: ['../liuchengjin/es/src', '../liuchengjin/lib/src'],
+      outputDir: ['../van-view-template/es/src', '../van-view-template/lib/src'],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'
     }),

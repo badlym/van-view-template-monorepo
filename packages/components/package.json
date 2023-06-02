@@ -1,5 +1,5 @@
 {
-  "name": "@liuchengjin/components",
+  "name": "@van-view-template/components",
   "version": "1.0.0",
   "description": "",
   "main": "./index.ts",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@liuchengjin/utils": "workspace:^1.0.0"
+    "@van-view-template/utils": "workspace:^1.0.0"
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.29.2"

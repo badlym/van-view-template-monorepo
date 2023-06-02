@@ -1,5 +1,5 @@
 {
-  "name": "@liuchengjin/utils",
+  "name": "@van-view-template/utils",
   "version": "1.0.2",
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.js",

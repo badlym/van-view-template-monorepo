@@ -24,7 +24,7 @@ const delPath = async (path: string) => {
       }
     });
 
-    if (path != `${pkgPath}/liuchengjin`) fs.rmdirSync(path);
+    if (path != `${pkgPath}/van-view-template`) fs.rmdirSync(path);
   }
 };
 export default delPath;

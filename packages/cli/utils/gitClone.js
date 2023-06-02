@@ -15,8 +15,8 @@ export default (remote, name, option) => {
       downSpinner.succeed(chalk.green('模板下载成功！'));
       console.log(chalk.green(`cd ${name}\r\n`));
       console.log(chalk.blue('pnpm install\r\n'));
-      console.log('pnpm run build:liuchengjin\r\n');
-      console.log('pnpm run liuchengjin:dev\r\n');
+      console.log('pnpm run build:van-view-template\r\n');
+      console.log('pnpm run van-view-template:dev\r\n');
       resolve();
     });
   });

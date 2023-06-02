@@ -16,7 +16,7 @@ const optionDefinitions = [
 //帮助命令
 const helpSections = [
   {
-    header: 'create-liuchengjin',
+    header: 'create-van-view-template',
     content: '一个快速生成组件库搭建环境的脚手架'
   },
   {
@@ -49,7 +49,7 @@ const promptsOptions = [
     message: '请选择一个模板',
     choices: [
       { title: 'kitty-ui', value: 1 },
-      { title: 'liuchengjin', value: 2 }
+      { title: 'van-view-template', value: 2 }
     ]
   }
 ];
@@ -57,7 +57,7 @@ const options = commandLineArgs(optionDefinitions);
 
 const remoteList = {
   1: 'https://gitee.com/geeksdidi/kittyui.git',
-  2: 'https://github.com/qddidi/liuchengjin.git'
+  2: 'https://github.com/qddidi/van-view-template.git'
 };
 const getUserInfo = async () => {
   const res = await prompts(promptsOptions);

@@ -1,13 +1,13 @@
 {
-  "name": "@liuchengjin/monorepo",
+  "name": "@van-view-template/monorepo",
   "version": "1.0.0",
-  "description": "个人的的monorepo仓库",
+  "description": "van-view-template monorepo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:play": "pnpm -r --filter play run dev",
-    "build:liuchengjin": "gulp -f packages/components/script/build/index.ts",
-    "publish:liuchengjin": "gulp -f packages/components/script/publish/index.ts"
+    "build:van-view-template": "gulp -f packages/components/script/build/index.ts",
+    "publish:van-view-template": "gulp -f packages/components/script/publish/index.ts"
   },
   "keywords": [],
   "author": "liuchengjin",

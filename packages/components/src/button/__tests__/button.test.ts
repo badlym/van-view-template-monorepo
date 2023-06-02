@@ -7,12 +7,12 @@ describe('test button', () => {
   it('should render slot', () => {
     const wrapper = mount(button, {
       slots: {
-        default: 'liuchengjin'
+        default: 'van-view-template'
       }
     });
 
     // Assert the rendered text of the component
-    expect(wrapper.text()).toContain('liuchengjin');
+    expect(wrapper.text()).toContain('van-view-template');
   });
   it('should have class', () => {
     const wrapper = mount(button, {
