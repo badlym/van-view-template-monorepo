@@ -9,14 +9,12 @@ npm run docs:build
 # 进入待发布的目录
 cd docs/.vitepress/dist
 
-git remote add doc https://github.com/van-view-tempalte/doc.git
+git init
+git remote add origin https://github.com/van-view-tempalte/doc.git
 git add -A
 git commit -m 'deploy'
 
-# 如果部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-
-# 如果是部署到 https://<USERNAME>.github.io/<REPO>
-git push -f doc master
+# 推送到 master 分支
+git push -f origin master
 
 # cd -
