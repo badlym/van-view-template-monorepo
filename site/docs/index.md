@@ -21,7 +21,7 @@ hero:
 
 features:
   - icon: 💡
-    title: Vue3组件库
+    title: Vue3移动端框架
     details: 基于vite+TypeScript开发
   - icon: 📦
     title: 让你的组件库开发更简单
