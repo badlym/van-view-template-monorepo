@@ -1,27 +1,36 @@
-name: CI
+name: Deploy to van-view-tempalte/doc
+
 on:
   push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+    branches:
+      - main  # 触发条件可以根据你的实际情况修改
+
 jobs:
-  Build:
-    # The type of runner that the job will run on
+  build:
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.1.0
-        with:
-          version: 7.2.1
-      - name: Install modules
-        run: pnpm install
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Run Lint
-        run: pnpm run docs:build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run docs:build
+
+      - name: Deploy to van-view-tempalte/doc
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          cd docs/.vitepress/dist
+          git init
+          git remote add destination https://github.com/van-view-tempalte/doc.git
+          git add .
+          git commit -m "Deploy"
+          git push -f destination master
